@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width">
+<meta property="og:title" content="Titre de la brochure" />
+
+
+
+
+<meta name="author" content="Bernard Morin" />
+<meta name="author" content="Jean-Claude Dusse" />
+
+<meta name="date" content="2020-10-26" />
+
+<meta name="description" content="Titre de la brochure">
+
+<script id="pandoc-meta" type="application/json">
+{"newpage_html_class":"page-break-after","lang":"fr","date":"2020-10-26","subtitle":"Sous-titre (si on en veut un)","output":{"pagedown::html_paged":{"self_contained":null,"toc":null,"css":["css/default-fonts.css","css/default-page.css","css/default.css"],"number_sections":null}},"abstract-title":"Résumé","author":["Bernard Morin","Jean-Claude Dusse"],"abstract":"<p>On peut faire le choix d’utiliser le champ <code>abstract</code>\nmais on n’est pas obligé.</p>","title":"Titre de la brochure"}
+</script>
+
+<title>Titre de la brochure</title>
+
+
+<script src="index_files/header-attrs-2.4/header-attrs.js"></script>
+<script src="index_files/paged-0.12/js/config.js"></script>
+<script src="index_files/paged-0.12/js/paged.js"></script>
+<script src="index_files/paged-0.12/js/hooks.js"></script>
+<script src="index_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<style type="text/css">
+  h3.abstract{
+    text-align: center;
+  }
+  div.abstract{
+    margin: auto;
+    width: 90%;
+  }
+</style>
+
+<link rel="stylesheet" href="css/default-fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/default-page.css" type="text/css" />
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="running-h1-title"></div>
+
+<div class="running-h2-title"></div>
+
+
+
+<div class="front-page">
+<div id="header" class="title-page">
+<h1 class="title">Titre de la brochure</h1>
+<h1 class="subtitle"><span>Sous-titre (si on en veut un)</span></h1>
+<h2 class="author">Bernard Morin</h2>
+<h2 class="author">Jean-Claude Dusse</h2>
+<h2 class="date">2020-10-26</h2>
+</div>
+<div class="abstract">
+<h3 class="abstract">Résumé</h3>
+<p>On peut faire le choix d’utiliser le champ <code>abstract</code>
+mais on n’est pas obligé.</p>
+</div>
+</div>
+
+<div class="front-matter-container">
+</div>
+
+<div class="main">
+<div id="titre-de-niveau-1" class="section level1">
+<h1>Titre de niveau 1</h1>
+<p>Les titres de niveau 1 sont habituellement réservés pour les ouvrages, aux titres de chapitres ou de parties.</p>
+<p>Dans le cadre de la brochure, on utilisera plus volontiers les titres de niveau 2.</p>
+<div id="aperçu-de-quelques-éléments" class="section level2">
+<h2>Aperçu de quelques éléments</h2>
+<p>R Markdown s’appuie sur <a href="https://pandoc.org">Pandoc</a>, on peut donc utiliser <strong>du gras</strong>, de <em>l’italique</em>, des exposants<sup>1</sup>, des indices<sub>a</sub>, une <code>police à chasse fixe</code>, des <span id="span-id" class="span-class">spans</span> et aussi des divs :</p>
+<div id="div-id" class="div-class">
+<p>petit piège de pandoc</p>
+<p>dans une div, il met le contenu textuel systématiquement dans un paragraphe</p>
+<div>
+<p>on peut rajouter une div dans une autre</p>
+</div>
+</div>
+</div>
+<div id="un-graphique-inséré-par-r-markdown" class="section level2">
+<h2>Un graphique inséré par R Markdown</h2>
+<p>Un exemple de graphique inséré automatiquement par R Markdown :</p>
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="variables-pandoc" class="section level2">
+<h2>Variables Pandoc</h2>
+<p><strong>pagedown</strong> utilise un template Pandoc qui lui est spécifique, situé <a href="https://github.com/rstudio/pagedown/blob/master/inst/resources/html/paged.html">ici</a>.</p>
+<p>Pour l’utilisateur de R, c’est la voie privilégiée pour insérer des fragments HTML (dans le header, au début/à la fin du body).</p>
+</div>
+<div id="les-ajouts-de-pagedown" class="section level2">
+<h2>Les ajouts de pagedown</h2>
+<p>La package <strong>pagedown</strong> amène Paged.js dans l’univers R Markdown.</p>
+<p>Afin que les utilisateurs puissent travailler hors ligne, une copie de Paged.js est embarquée dans pagedown. Plus précisément, il s’agit de la version 0.1.32 (désolé, je n’ai pas eu le temps de faire la mise à jour).</p>
+<p>Par ailleurs, pagedown fait beaucoup de choses “autour” de Paged.js :</p>
+<ul>
+<li><p>il utilise un certain nombre de filtres Pandoc (ce n’est donc pas un simple <code>pandoc input.md --output output.html</code>), voir <a href="https://github.com/rstudio/pagedown/tree/master/inst/resources/lua" class="uri">https://github.com/rstudio/pagedown/tree/master/inst/resources/lua</a></p></li>
+<li><p>il utilise quelques hooks Paged.js, voir <a href="https://github.com/rstudio/pagedown/blob/master/inst/resources/js/hooks.js" class="uri">https://github.com/rstudio/pagedown/blob/master/inst/resources/js/hooks.js</a></p></li>
+<li><p>il intègre différentes feuilles de style basiques.</p></li>
+</ul>
+<div id="fonctionnalités-supplémentaires" class="section level3">
+<h3>Fonctionnalités supplémentaires</h3>
+<p>Les demandes de la communauté d’utilisateurs ont conduit à intégrer dans pagedown des fonctionnalités supplémentaires décrites ici <a href="https://pagedown.rbind.io/#miscellaneous-features" class="uri">https://pagedown.rbind.io/#miscellaneous-features</a>.</p>
+<p>Je vois éventuellement deux fonctionnalités qui pourraient être utiles pour la brochure :</p>
+<ul>
+<li>sauts de page (<a href="https://pagedown.rbind.io/#page-breaks" class="uri">https://pagedown.rbind.io/#page-breaks</a>)</li>
+<li>insertion d’une image de couverture (<a href="https://pagedown.rbind.io/#covers" class="uri">https://pagedown.rbind.io/#covers</a>)</li>
+</ul>
+</div>
+</div>
+<div id="le-worflow-pour-lutilisateur-de-r" class="section level2">
+<h2>Le worflow pour l’utilisateur de R</h2>
+<p>L’utilisateur de R va simplement écrire tout son contenu en markdown dans un fichier avec l’extension <code>.Rmd</code>.</p>
+<p>La génération du fichier HTML (et des fichiers CSS et JS) s’effectue grâce au package R <strong>rmarkdown</strong> (voir le fichier <code>Makefile</code>).</p>
+<p>L’utilisateur standard de R ne connaît généralement pas HTML et CSS. C’est la raison pour laquelle on s’appuie sur des packages qui vont générer le HTML et intégrer les feuilles de style afin de lui simplifier le travail.</p>
+<p>Cependant, l’utilisateur avancé dispose de toutes les options (la plupart consistant à modifier l’en-tête YAML du fichier <code>Rmd</code>) pour rajouter des feuilles de style, des fragments HTML, du JavaScript, etc.</p>
+</div>
+</div>
+</div>
+
+
+
+<script>
+// when the page is about to reload via servr, remember the scroll position
+document.addEventListener('servr:reload', function(e) {
+  sessionStorage.setItem('pagedown-scroll', window.scrollY);
+});
+</script>
+</body>
+</html>
