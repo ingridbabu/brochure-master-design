@@ -11,6 +11,7 @@ author:
   - Jean-Claude Dusse
 date: "`r Sys.Date()`"
 lang: fr
+paged-footnotes: true
 output:
   pagedown::html_paged:
     # ne pas modifier la ligne suivante
@@ -59,12 +60,14 @@ on peut rajouter une div dans une autre
 
 :::::
 
-## Un graphique inséré par R Markdown
+Une footnote^[contenu de la note de bas de page]
+
+## Un graphique inséré par R Markdown {.custom-class}
 
 Un exemple de graphique inséré automatiquement par R Markdown :
 
 ```{r}
-plot(pressure)
+plot(iris)
 ```
 
 ## Variables Pandoc
@@ -105,3 +108,9 @@ La génération du fichier HTML (et des fichiers CSS et JS) s'effectue grâce au
 L'utilisateur standard de R ne connaît généralement pas HTML et CSS. C'est la raison pour laquelle on s'appuie sur des packages qui vont générer le HTML et intégrer les feuilles de style afin de lui simplifier le travail.
 
 Cependant, l'utilisateur avancé dispose de toutes les options (la plupart consistant à modifier l'en-tête YAML du fichier `Rmd`) pour rajouter des feuilles de style, des fragments HTML, du JavaScript, etc.
+
+## Insérer du Javascript
+
+```{js, echo=FALSE}
+PagedConfig.auto=true;
+```

@@ -16,22 +16,20 @@
 <meta name="author" content="Bernard Morin" />
 <meta name="author" content="Jean-Claude Dusse" />
 
-<meta name="date" content="2020-10-26" />
+<meta name="date" content="2020-10-28" />
 
 <meta name="description" content="Titre de la brochure">
 
 <script id="pandoc-meta" type="application/json">
-{"newpage_html_class":"page-break-after","lang":"fr","date":"2020-10-26","subtitle":"Sous-titre (si on en veut un)","output":{"pagedown::html_paged":{"self_contained":null,"toc":null,"css":["css/default-fonts.css","css/default-page.css","css/default.css"],"number_sections":null}},"abstract-title":"Résumé","author":["Bernard Morin","Jean-Claude Dusse"],"abstract":"<p>On peut faire le choix d’utiliser le champ <code>abstract</code>\nmais on n’est pas obligé.</p>","title":"Titre de la brochure"}
+{"newpage_html_class":"page-break-after","paged-footnotes":true,"lang":"fr","date":"2020-10-28","subtitle":"Sous-titre (si on en veut un)","output":{"pagedown::html_paged":{"self_contained":false,"toc":false,"css":["css/default-fonts.css","css/default-page.css","css/default.css"],"number_sections":false}},"abstract-title":"Résumé","author":["Bernard Morin","Jean-Claude Dusse"],"abstract":"On peut faire le choix d’utiliser le champ <code>abstract</code>\nmais on n’est pas obligé.","title":"Titre de la brochure"}
 </script>
 
 <title>Titre de la brochure</title>
 
 
-<script src="index_files/header-attrs-2.4/header-attrs.js"></script>
-<script src="index_files/paged-0.12/js/config.js"></script>
-<script src="index_files/paged-0.12/js/paged.js"></script>
-<script src="index_files/paged-0.12/js/hooks.js"></script>
-<script src="index_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="index_files/paged-0.12.2/js/config.js"></script>
+<script src="index_files/paged-0.12.2/js/paged.js"></script>
+<script src="index_files/paged-0.12.2/js/hooks.js"></script>
 
 
 
@@ -65,12 +63,12 @@
 <h1 class="subtitle"><span>Sous-titre (si on en veut un)</span></h1>
 <h2 class="author">Bernard Morin</h2>
 <h2 class="author">Jean-Claude Dusse</h2>
-<h2 class="date">2020-10-26</h2>
+<h2 class="date">2020-10-28</h2>
 </div>
 <div class="abstract">
 <h3 class="abstract">Résumé</h3>
-<p>On peut faire le choix d’utiliser le champ <code>abstract</code>
-mais on n’est pas obligé.</p>
+On peut faire le choix d’utiliser le champ <code>abstract</code>
+mais on n’est pas obligé.
 </div>
 </div>
 
@@ -92,8 +90,9 @@ mais on n’est pas obligé.</p>
 <p>on peut rajouter une div dans une autre</p>
 </div>
 </div>
+<p>Une footnote<span id="fn1" class="footnote" data-pagedown-footnote-number="1" style="white-space: pre-line;">contenu de la note de bas de page</span></p>
 </div>
-<div id="un-graphique-inséré-par-r-markdown" class="section level2">
+<div id="un-graphique-inséré-par-r-markdown" class="section level2 custom-class">
 <h2>Un graphique inséré par R Markdown</h2>
 <p>Un exemple de graphique inséré automatiquement par R Markdown :</p>
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
@@ -129,6 +128,12 @@ mais on n’est pas obligé.</p>
 <p>La génération du fichier HTML (et des fichiers CSS et JS) s’effectue grâce au package R <strong>rmarkdown</strong> (voir le fichier <code>Makefile</code>).</p>
 <p>L’utilisateur standard de R ne connaît généralement pas HTML et CSS. C’est la raison pour laquelle on s’appuie sur des packages qui vont générer le HTML et intégrer les feuilles de style afin de lui simplifier le travail.</p>
 <p>Cependant, l’utilisateur avancé dispose de toutes les options (la plupart consistant à modifier l’en-tête YAML du fichier <code>Rmd</code>) pour rajouter des feuilles de style, des fragments HTML, du JavaScript, etc.</p>
+</div>
+<div id="insérer-du-javascript" class="section level2">
+<h2>Insérer du Javascript</h2>
+<script type="text/javascript">
+PagedConfig.auto=true;
+</script>
 </div>
 </div>
 </div>
