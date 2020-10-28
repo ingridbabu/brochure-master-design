@@ -14,4 +14,6 @@ Log in RStudio with credentials:
 - user: `rstudio`
 - password: `propre`
 
+This launchs the following image: `inseefrlab/rstudio`
+
 Clone this project.
