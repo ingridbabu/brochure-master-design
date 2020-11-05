@@ -1,15 +1,9 @@
 ---
-title: "Titre de la brochure"
-subtitle: "Sous-titre (si on en veut un)"
-abstract: |
-  On peut faire le choix d'utiliser le champ `abstract`
-  mais on n'est pas obligé.
-abstract-title: "Résumé"
-author:
-  # éventuellement
-  - Bernard Morin
-  - Jean-Claude Dusse
-date: "`r Sys.Date()`"
+title: "la démarche PROPRE"
+subtitle: "Et s’il existait un outil mutualisé, presque clef en main, qui permettrait aux DREAL/DEAL de publier périodiquement leurs analyses de façon homogène dans des délais raccourcis ?"
+abstract: 
+abstract-title: 
+author: 
 lang: fr
 paged-footnotes: true
 output:
@@ -30,86 +24,132 @@ output:
     css:
       # liste (qu'on peut modifier) des fichiers CSS inclus dans le ficher HTML en sortie
       # les fichiers default* sont les fichiers inclus par défaut dans pagedown
-      - css/default-fonts.css
-      - css/default-page.css
-      - css/default.css
+      - css/marqueEtat/book.css #interface for pagedjs
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Titre de niveau 1
+::: {#titlepage}
 
-Les titres de niveau 1 sont habituellement réservés pour les ouvrages, aux titres de chapitres ou de parties. 
 
-Dans le cadre de la brochure, on utilisera plus volontiers les titres de niveau 2.
 
-## Aperçu de quelques éléments
+:::: {#bloc-marianne}
+![Marianne — Liberté, égalité, fraternité](images/marianne.svg)
 
-R Markdown s'appuie sur [Pandoc](https://pandoc.org), on peut donc utiliser **du gras**, de _l'italique_, des exposants^1^, des indices~a~, une `police à chasse fixe`, des [spans]{#span-id .span-class} et aussi des divs :
+## INTITULÉ <br/>OFFICIEL
 
-::::: {#div-id .div-class}
-petit piège de pandoc
+![Liberté, égalité, fraternité](images/lib-eg-fra.svg)
 
-dans une div, il met le contenu textuel systématiquement dans un paragraphe
 
-::: {}
-on peut rajouter une div dans une autre
+::::
+
+
+:::: {#header}
+
+# La démarche PROPRE
+
+## Et s’il existait un outil mutualisé, presque clef en main, qui permettrait aux DREAL/DEAL de publier périodiquement leurs analyses de façon homogène dans des délais raccourcis ?
+
+
+::::
+
+
+
+<!-- ![ test ](images/online-community.svg) -->
+![ test ](images/drawkit-content-man-monochrome.svg)
+
+
+
 :::
 
-:::::
+ 
 
-Une footnote^[contenu de la note de bas de page]
 
-## Un graphique inséré par R Markdown {.custom-class}
+:::{.page2}
 
-Un exemple de graphique inséré automatiquement par R Markdown :
+::::{.header}
+## La thérorie et la pratique
 
-```{r}
-plot(iris)
-```
+Qui cherche à faire quoi, et comment.  ex anim duis cupidatat ea exercitation. Aute officia sit magna non aute Lorem. Tempor occaecat proident proident irure Lorem veniam exercitation aliqua sunt sit occaecat eiusmod aliqua commodo.
+::::
 
-## Variables Pandoc
+::::{.sub}
+![](images/calendar-monochrome.svg)
 
-**pagedown** utilise un template Pandoc qui lui est spécifique, situé [ici](https://github.com/rstudio/pagedown/blob/master/inst/resources/html/paged.html).
+### Open Source au cœur. 
+Open source = service public 2.0 (lololol);
+État qui veut mettre toute ses innovations en licence open source
+Ullamco esse do dolore sint labore duis ipsum dolore culpa irure et quis. Cupidatat nisi nisi pariatur cillum ut exercitation anim. Voluptate fugiat magna do deserunt aliquip quis occaecat tempor ipsum incididunt veniam occaecat esse labore.
+Voluptate aute culpa enim officia voluptate in ea sunt. Enim magna enim nisi sunt. Esse aliqua proident adipisicing nisi eiusmod labore. Labore consequat nisi dolor cillum ea. Ea aliqua culpa ex dolore in esse proident. Reprehenderit commodo sint do adipisicing cupidatat culpa minim enim reprehenderit sint id. Adipisicing cillum adipisicing tempor duis officia do aute ullamco adipisicing pariatur minim ut incididunt excepteur.
+::::
 
-Pour l'utilisateur de R, c'est la voie privilégiée pour insérer des fragments HTML (dans le header, au début/à la fin du body).
+::::{.sub}
 
-## Les ajouts de pagedown
+![](images/calendar-monochrome.svg)
 
-La package **pagedown** amène Paged.js dans l'univers R Markdown.
+### Délais raccourcis
+Voluptate aute culpa enim officia voluptate in ea sunt. Enim magna enim nisi sunt. Esse aliqua proident adipisicing nisi eiusmod labore. Labore consequat nisi dolor cillum ea. Ea aliqua culpa ex dolore in esse proident. Reprehenderit commodo sint do adipisicing cupidatat culpa minim enim reprehenderit sint id. Adipisicing cillum adipisicing tempor duis officia do aute ullamco adipisicing pariatur minim ut incididunt excepteur.
 
-Afin que les utilisateurs puissent travailler hors ligne, une copie de Paged.js est embarquée dans pagedown. Plus précisément, il s'agit de la version 0.1.32 (désolé, je n'ai pas eu le temps de faire la mise à jour).
+::::
 
-Par ailleurs, pagedown fait beaucoup de choses "autour" de Paged.js :
+::::{.sub}
 
-- il utilise un certain nombre de filtres Pandoc (ce n'est donc pas un simple `pandoc input.md --output output.html`), voir <https://github.com/rstudio/pagedown/tree/master/inst/resources/lua>
+![](images/calendar-monochrome.svg)
 
-- il utilise quelques hooks Paged.js, voir <https://github.com/rstudio/pagedown/blob/master/inst/resources/js/hooks.js>
 
-- il intègre différentes feuilles de style basiques.
+### La forge
+- les outils :
+Ullamco esse do dolore sint labore duis ipsum dolore culpa irure et quis. Cupidatat nisi nisi pariatur cillum ut exercitation anim. Voluptate fugiat magna do deserunt aliquip quis occaecat tempor ipsum incididunt veniam occaecat esse labore.
 
-### Fonctionnalités supplémentaires
+::::
 
-Les demandes de la communauté d'utilisateurs ont conduit à intégrer dans pagedown des fonctionnalités supplémentaires décrites ici <https://pagedown.rbind.io/#miscellaneous-features>.
+::::{.sub}
 
-Je vois éventuellement deux fonctionnalités qui pourraient être utiles pour la brochure :
+![](images/calendar-monochrome.svg)
 
-- sauts de page (<https://pagedown.rbind.io/#page-breaks>)
-- insertion d'une image de couverture (<https://pagedown.rbind.io/#covers>)
 
-## Le worflow pour l'utilisateur de R
+### La forge
 
-L'utilisateur de R va simplement écrire tout son contenu en markdown dans un fichier avec l'extension `.Rmd`.
+Ullamco esse do dolore sint labore duis ipsum dolore culpa irure et quis. Cupidatat nisi nisi pariatur cillum ut exercitation anim. Voluptate fugiat magna do deserunt aliquip quis occaecat tempor ipsum incididunt veniam occaecat esse labore.
+Voluptate aute culpa enim officia voluptate in ea sunt. Enim magna enim nisi sunt. Esse aliqua proident adipisicing nisi eiusmod labore. Labore consequat nisi dolor cillum ea. Ea aliqua culpa ex dolore in esse proident. Reprehenderit commodo sint do adipisicing cupidatat culpa minim enim reprehenderit sint id. Adipisicing cillum adipisicing tempor duis officia do aute ullamco adipisicing pariatur minim ut incididunt excepteur.
 
-La génération du fichier HTML (et des fichiers CSS et JS) s'effectue grâce au package R **rmarkdown** (voir le fichier `Makefile`).
+::::
 
-L'utilisateur standard de R ne connaît généralement pas HTML et CSS. C'est la raison pour laquelle on s'appuie sur des packages qui vont générer le HTML et intégrer les feuilles de style afin de lui simplifier le travail.
+:::
 
-Cependant, l'utilisateur avancé dispose de toutes les options (la plupart consistant à modifier l'en-tête YAML du fichier `Rmd`) pour rajouter des feuilles de style, des fragments HTML, du JavaScript, etc.
+:::{.page3}
+## titre de la page 3
 
-## Insérer du Javascript
+Concept à déployer
+
+- changement de méthode de travail
+- la forge
+- meilleure collaboration (responsabilisation du contenu)
+- anticipation des problèmes 
+- les utilisateurs 
+:::
+
+
+:::{.page4}
+## pour aller plus loin
+
+### Glossaire (marche en note de colonnes.)
+
+ 
+::::{.colophon}
+
+### Colophon
+
+Ce document a été fabriqué ....
+
+
+
+::::
+
+:::
+
 
 ```{js, echo=FALSE}
 PagedConfig.auto=true;
