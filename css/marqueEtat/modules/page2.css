@@ -1,0 +1,48 @@
+.page2 {
+  page: page2;
+}
+
+@page page2 {
+  margin: 8mm;
+  margin-top: 12mm;
+}
+
+.page2 .figure img {
+  max-width: 100%;
+  width: 100%;
+  float: right;
+}
+
+.page2 {
+  margin-left: 10mm;
+  /* width: 100%; */
+  width: calc(100% - 4mm);
+  display: grid;
+  grid-template-columns: [left] 1fr [right] 1fr [end];
+}
+
+.page2 .header {
+  grid-column: left / end;
+  margin-top: 0;
+}
+
+.page2 .header h2 {
+  font-size: 3em;
+}
+
+.page2 .header p {
+  max-width: 45ch;
+  font-weight: 300;
+  font-size: 1.3em;
+  font-family: var(--font-title);
+
+  margin-bottom:2em;
+}
+
+.page2 .section img {
+  width: 100px;
+}
+
+.page2 img {
+  height: 200px !important;
+}
