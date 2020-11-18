@@ -66,37 +66,55 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ::::{.header}
 
-Depuis 2015, le datalab de la DREAL Pays de la Loire a expérimenté de nouvelles méthodes de travail autour du *Design Thinking* et des process agile pour réaliser ses publications statistiques. En opérant le pivot d'une culture de la donnée vers une culture logicielle, il se dote de PROPRE pour PROcessus de Publications REproductibles et métamorphose son métier. Premier exemple de cette évolution, le rapport sur __le parc logement locatif social__.
+Depuis 2015, le datalab de la DREAL Pays de la Loire a expérimenté de nouvelles méthodes de travail autour du *Design Thinking* et des process agile pour réaliser ses publications statistiques. En opérant le pivot d'une culture de la donnée vers une culture logicielle, il se dote de PROPRE pour PROcessus de Publications REproductibles et métamorphose son métier. Premier exemple de cette (r)évolution, la publication coordonnée inter-DREAL sur le __ répertoire du parc locatif social __.
 
 ::::
 
 ::::{.sub}
 
-La démarche repose sur une adapation à la publication d'analyses statistiques - en ligne sous forme de pages ou d'applications interactives- des principes de développement logiciel dits DevOps. Cette approche prône un continuum entre les Dev (chargés de développer de nouvelles solutions, d'innover) et les Ops (garants de l'intégrité des systèmes, de sa stabilité) en plaçant l'utilisateur au cœur de ses préoccupations des uns et des autres. C'est une coopération de fait où chacun des maillons prend sa part de responsabilité en se préoccupant de ce qui se passe en aval. 
+La démarche repose sur une adaptation pour la publication d'analyses statistiques de principes de développement logiciel. Un langage de programmation est utilisé pour scripter des actions dans un formalisme qui permet de construire un traitement reproductible et intégré, de la donnée jusqu'à la communication des résultats sous forme de pages web ou d'applications interactives en ligne. 
 
-### R, le langage commun
+### R, Espéranto de la statistique
 
-R est particulièrement adapté à une approche intégrée de la donnée : tout peut être mis en place dans ce même langage. Que ce soit pour la structuration des données, pour leur analyse, ou pour leur mise en page, il n’est plus nécessaire de faire transiter les données d’une application à une autre. Propre est une chaîne de publication normalisée dans laquelle R devient un langage commun entre les agents chargés du contenu, et ceux chargés de la fabrication des outils, dans un principe d’organisation emprunté au développement logiciel, le *DevOps*.
+R est un langage de programmation particulièrement adapté à une approche intégrée de l'exploitation de la donnée. Que ce soit pour structurer les données, les analyser, en tracer des graphiques ou les mettre en page dans des rapports : tout peut être développé dans ce même langage. Il n’est plus nécessaire d'opérer de multiples changements d'outils sujets à l'erreur. Propre est une chaîne de traitement normalisée où R est la cheville ouvrière de la publication tant dans sa dimension éditoriale que statistique. Sa mise en oeuvre est ici inspirée du mouvement *DevOps*, pratique d'ingéniérie logicielle fondée sur l'automation et le monitoring.
 
-### Devops
+Au début des travaux sur le RPLS*, les connaissances en R des acteurs impliqués dans le projet allaient de l'excellente maîtrise technique à la simple prise de conscience. C'est pour ses propriétés open source et sa polyvalence qu'il a été choisi pour Propre. 
 
-Approche prône un *continuum* entre les *Dev* (chargés de développer de nouvelles solutions) et les *Ops* (garants de l'intégrité et de la stabilité des systèmes) en plaçant l'utilisateur au cœur des préoccupations. L’innovation se fait grâce au travail commun de l’ensemble des membres de l’équipe, dans une coopération de fait où chaque partie prenante prend sa part de responsabilité en se préoccupant de ce qui se passe en amont et de ce qui est attendu en aval.
+* RPLS : Répertoire du parc locatif social
 
-### Évolution des agents
+### La pratique Devops pour guide
 
-Dans le cadre du rapport LLS, deux équipes se sont coordonnées pour construire l’outil de publication: une équipe éditoriale, garante des contenues et des propos, et l’équipe de développement, chargé de livrer les fonctionnalités nécessaire à la réussite de la publication. L’ensemble des décisions étaient traduite en simulation de publication, offrant un espace d’échanges aux équipes permettant aux un de comprendre les problématiques éditoriales et aux autres les problématiques techniques. Ainsi le passage de relai continu à offert à chacun une compréhension du travail de l’autre et une montée en compétences réutilisable dans d’autres espaces. De plus, la mise en place du paquet a été l’objet d’une documentation pour rendre facile la réutilisation de l’ensemble des outils développés.
+L'approche DevOps défend un *continuum* entre les *Dev* (chargés de développer de nouvelles solutions) et les *Ops* (garants de l'intégrité et de la stabilité des systèmes opérants) en plaçant l'utilisateur au cœur des préoccupations. Les “dev” vont programmmer, compiler, tester et livrer aux “ops” qui vont déployer, opérer, monitorer pour informer les “dev” des nouveaux développements à planifier et ainsi boucler la boucle. L’innovation se fait grâce au travail commun de l’ensemble des membres de l’équipe, dans une coopération de fait où chaque partie prenante prend sa part de responsabilité en se préoccupant de ce qui se passe en amont et de ce qui est attendu en aval. 
 
-### La forge logicielle
+étant eux-aussi utilisateurs du produit logiciel, les agents impliqués dans le cas d'école RPLS ont été responsabilisés sur les liens de cause à effet de leurs choix. Cela s'est traduit par une importante solidarité. 
 
-Pour qu’une telle organisation puisse se mettre en place, la démarche Propre s’appuie sur une forge logicielle, le lieu de façonnage des publications. Elle est construite autour d’un outil qui monitore et sécurise les modifications du code et du contenu. À chaque mise à jour, la conformité du résultat face aux attentes est vérifié par un ensemble de test automatisés, et contrôlé par un regard humain, avec la possibilité de revenir en arrière à tout moment. Cette *intégration continue* est aussi permise grace à un ensemble d’outils de communications, qu’il s’agisse de commentaires directement au niveau du code ou d’espaces de conversations synchrones ou asynchrones. 
 
-### Mutualisé
+### La forge logicielle pour fédérer
 
-Le paquet R est la brique réutilisable à la base de la démarche Propre. Il est à la fois le contenu, sa mise en forme, ses fonctionnalités, sa documentation et ses test. L’ensemble de ses propriétés autoportantes lui confèrent intégrité, maintenabilité et pérénnité, devenant une solution prête à l'emploi pour les situations équivalentes. L’aptitude à concevoir des paquets R est une nouvelle compétence pour les agents, transposables dans ses principes à d'autres développements logiciels. De plus, la maintenance du paquet, et son évolution, est partagée entre tous les acteurs, qui peuvent développer une fonctionnalité pour répondre à leur besoin, et, ainsi apporter un outil de plus à l’ensemble des utilisateurs du paquet. L'objet produit dans la démarche PROPRE concentre ainsi le fruit d'une intelligence collective, en lien avec l’évolution des usages et les métiers des agents.
+Pour qu’une telle organisation puisse prendre vie, la démarche Propre s’appuie sur une forge logicielle, lieu de façonnage des publications. Elle est construite autour d’un outil qui monitore et sécurise les modifications du code et du contenu. À chaque mise à jour, les résultats sont vérifiés par un lot de test de conformité automatisés et approuvés par un relecteur. Se tromper est permis par la possibilité de revenir en arrière à tout moment et en sécurité. L' *intégration continue* des modifications est rendue possible au moyen d'une importante communication, qu’il s’agisse de commentaires directement au niveau du code ou d’espaces de conversations synchrones ou asynchrones. 
+
+Véritable lieu de rencontre et de capitalisation, la forge RPLS est à la fois la mémoire et la manifestation tangible des travaux qui en sont issus.  
+
+
+### Le paquet R comme outil collaboratif
+
+L'objet logiciel produit dans la démarche Propre est particulier, c'est un paquet R. Une brique standardisée et réutilisable qui contient fonctionnalités, documentation et tests. Sa nature lui confère intégrité, maintenabilité et pérénnité. Tout utilisateur est un potentiel contributeur en mesure de développer de nouvelles fonctionnalités éventuellement reversées. Evolutivité et collaboration sont structurellement inscrites dans le concept de paquet R élaboré dans une forge logicielle.
+
+La mutualisation des travaux sous forme d'un outil empaqueté a permis une publication collaborative et coordonnée pour toutes les régions sur l'état du parc locatif social
 
 
 ### Mise en forme & maintenance
-Les contenus sont élaborés en parallèle de leur mise en forme : en respectant le principe de séparation des préoccupations, Propre est une chaîne de publication réactive bénéficiant d'une mise en forme automatisée. Une mise à jour du fond présentera un résultat toujours homogène dans sa mise en forme et une mise à jour de la mise en forme pourra être répercutée sur tous les contenus. Les tests, intrinsèques à la démarche, enrayent d'éventuels effets de bord. La mise à jour du document est ainsi produite au fur et à mesure que les données sont actualisées. Et puisque les éléments sont rédigés et développés de manière sémantique, il est possible de les rendre lisible dans un rapport imprimé, sur un terminal mobile, un écran ou une application, offrant de plus grandes possibilités d’intéraction pour l’utilisateur, lui permettant de naviguer dans des contenus souvent complexes, dans les conditions qui lui permettront de prendre les meilleures décisions. 
+
+Propre est une chaîne de publication réactive bénéficiant d'une mise en forme automatisée. Les contenus sont élaborés en parallèle de leur allure graphique en respectant le principe de séparation des préoccupations. Une mise à jour du fond présentera un résultat toujours homogène dans sa mise en forme. À l'inverse, une mise à jour de la forme pourra être répercutée sur tous les contenus. Les tests, intrinsèques à la démarche, enrayent d'éventuels effets de bord. La mise à jour du document est ainsi produite au fur et à mesure que les données sont actualisées. Et puisque les éléments sont rédigés et développés de manière sémantique, il est possible de les rendre lisible dans un rapport imprimé, sur un terminal mobile, un écran ou une application, offrant de plus grandes possibilités d’interaction pour l’utilisateur.
+
+La transcription de la marque état en un paquet R prêt à l'emploi a permis aux équipes mobilisées sur le RPLS de se focaliser sur le fond plutôt que la forme tout en garantissant un résultat homogène
+
+
+### Valorisation des agents
+
+épouser l'approche Propre, c'est à dire opter pour R au sein d'une forge logicielle conduite selon une approche Devops responsabilisante est une expérience stimulante et enrichissante. L'élaboration de communs sculptés spécifiquement pour des besoins métiers adressés collectivement donne du sens aux travaux. Apporter de la valeur ajoutée ne se traduit pas nécessairement par la production de code R mais aussi par l'élaboration de contenus éditoriaux, la documentation ou encore la traduction en spécifications de besoins utilisateurs. L'objet produit dans la démarche Propre concentre ainsi le fruit d'une intelligence collective, en lien avec l’évolution des usages et les métiers des agents. Il s'anime en temps réel grâce à une communication étroite et bienveillante.  
+
+L’aptitude à concevoir des paquets R en lien avec les usages de façon collaborative et solidaire est une nouvelle compétence pour les agents, transposable dans ses principes à d'autres projets de développement logiciel. 
 
 ### Pour en savoir plus
 
@@ -114,15 +132,13 @@ Pour en savoir plus sur la démarche, vous pouvez vous mettre en relation avec j
 ::::{.chiffres}
 ## Quelques chiffres
 
-- 7 DREAL mobilisées
-- 1 agent du SDES impliqué
+- 7 DREAL mobilisées ainsi que le SDES (producteur de la donnée)
 - 4,9 k messages asynchrones
 - 5 réunions synchrones
 - une forge publique qui compte un projet déployé et un guide de publication
-- 146 tickets (dont 114 clos) et 215 commits pour `{propre.rpls}`
-- 166 demandes de rapatriement de code validé (merge request)
-- deux versions du paquet `{propre.rpls}`
-- un couverture du code par les tests de 96 %
+- 146 demandes (dont 114 closes) et 215 jalons de développements pour le paquet `{propre.rpls}`
+- 166 revues de code approuvées 
+- 96 % du code couvert par des tests fonctionnels
 
 ::::
 
@@ -135,7 +151,7 @@ Pour en savoir plus sur la démarche, vous pouvez vous mettre en relation avec j
 :::{.header}
 ## un processus technique reproductible, par étape
 
-En adoptant la démarche Propre, les flux opérationnels deviennent plus techniques car ils demandent plus de connaissances et de compétences logicielles mais la nature des travaux s'en trouve plus enrichie. Le processus est sécurisé et fiable car reproductible, versionné et intégré.
+En adoptant la démarche Propre, les flux opérationnels deviennent plus techniques car ils demandent plus de connaissances et de compétences logicielles mais la nature des travaux s'en trouve enrichie. Le processus est sécurisé et fiable car reproductible, versionné et intégré. Une approche comparée illustre les bénéfices d'une approche programmatique et logicielle. 
 :::
 
 :::::{.etape}
@@ -202,7 +218,7 @@ En adoptant la démarche Propre, les flux opérationnels deviennent plus techniq
 
 ### Colophon
 
-Ce document a été fabriqué ....
+Ce document a été fabriqué de façon reproductible
 
 
 ::::
