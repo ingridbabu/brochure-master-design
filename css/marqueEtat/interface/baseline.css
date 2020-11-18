@@ -2,8 +2,8 @@
 
 :root {
   /* you can change the line-height step for the grid here (as it may not be the same that the lineheight) */
-  --baseline: var(--font-lineHeight);
-  --baseline-color: white;
+  --baseline: 18px;
+  --baseline-color: red;
 }
 
 @media screen {
@@ -17,42 +17,9 @@
         var(--baseline-color) calc(var(--baseline)));
     background-size: cover;
     background-repeat: repeat-y;  
-    background-position-y: -12px;
-  }
-  .pagedjs_page_content {
-    &::after {
-      /* content: "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45"; */
-      line-height: var(--font-lineHeight);
-      position: absolute;
-      top: 0;
-      left: 570px;
-      color: var(--baseline-color);
-      display: block;
-      text-align: right;
-      width: 2ch;
-    }
-  }
-  h2::before {
-    /* content: 'h2'; */
-    color: red;
-    position: absolute;
-    left: -2px;
-  }
-  h3::before {
-    /* content: 'h3'; */
-    color: red;
-    position: absolute;
-    left: -2px;
+    background-position-y: -15px;
   }
 
-  .pagedjs_area::after {
-    display: block;
-    /* content: " "; */
-    border-right: 1px solid red;
-    width: calc(var(--margin-left, 20px) + 40px);
-    top: 0;
-    position: absolute;
-    height: 100%;
-  }
 }
+
 

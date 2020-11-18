@@ -4,13 +4,11 @@ ul {
   padding-top: 0;
   padding-bottom: 0;
 }
-
+li p {
+  text-indent: 0;
+}
 li {
   text-indent: 0;
-
-  p {
-    text-indent: 0;
-  }
 }
 
 ol[data-split-from],
